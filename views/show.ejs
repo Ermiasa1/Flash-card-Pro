@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+<ul>
+	<% for (var i=0; i<animals.length; i++) { %>
+		<li>
+			<span class="quest"><%= animals[i].question %></span>
+			<span class="hide"><%= animals[i].answer %></span>
+		</li>
+	<% } %>
+</ul>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">  	
+ </script>
+<script type="text/javascript">
+
+	$('.quest').on('click', function (){
+	$(this).siblings().eq(0).removeClass('hide');
+	//$(this).hide();
+})
+</script>
+
+</body>
+</html>
